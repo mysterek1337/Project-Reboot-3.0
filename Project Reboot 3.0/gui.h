@@ -78,7 +78,7 @@ extern inline std::string CustomMapName = "";
 extern inline int AmountToSubtractIndex = 1;
 extern inline int SecondsUntilTravel = 5;
 extern inline bool bSwitchedInitialLevel = false;
-extern inline bool bIsInAutoRestart = false;
+extern inline bool bIsInAutoRestart = true;
 extern inline float AutoBusStartSeconds = 60;
 extern inline int NumRequiredPlayersToStart = 2;
 extern inline bool bDebugPrintLooting = false;
@@ -318,7 +318,7 @@ static inline void StaticUI()
 {
 	if (IsRestartingSupported())
 	{
-		// ImGui::Checkbox("Auto Restart", &Globals::bAutoRestart);
+		ImGui::Checkbox("Auto Restart", &Globals::bAutoRestart);
 
 		if (Globals::bAutoRestart)
 		{
