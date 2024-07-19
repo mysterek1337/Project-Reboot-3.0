@@ -318,6 +318,8 @@ static inline void StaticUI()
 {
 	if (IsRestartingSupported())
 	{
+		Globals::bAutoRestart = true;
+		
 		ImGui::Checkbox("Auto Restart", &Globals::bAutoRestart);
 
 		if (Globals::bAutoRestart)
